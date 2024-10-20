@@ -73,9 +73,9 @@ dialogue_steps = [
 # Display the current dialogue based on the step
 def display_dialogue():
     if st.session_state.step < len(dialogue_steps):
-        st.write(f"**Monster (b):** {dialogue_steps[st.session_state.step]}")
+        st.write(f"**Monster:** {dialogue_steps[st.session_state.step]}")
     else:
-        st.write("**Monster (b):** Now, let’s see how your instructions shape my responses! What would you like me to say?")
+        st.write("**Monster:** Now, let’s see how your instructions shape my responses! What would you like me to say?")
 
 # Display the dialogue
 display_dialogue()
@@ -91,7 +91,7 @@ if st.session_state.step == len(dialogue_steps) - 1:  # Final interaction
         # Call the OpenAI chatbot with custom instructions
         instructions_input = st.session_state.instructions_input.strip()
         response = chat(instructions=instructions_input, prompt=prompt)
-        st.write(f"**Monster (b):** {response}")
+        st.write(f"**Monster:** {response}")
 
 # Button to move to the next dialogue step
 if st.session_state.step < len(dialogue_steps) - 1:
