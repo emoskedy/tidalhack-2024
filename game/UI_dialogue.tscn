@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccdlgqcf76s3u"]
+
+[ext_resource type="Script" path="res://UI_dialogue.gd" id="1_krnmw"]
+[ext_resource type="Texture2D" uid="uid://d3oxry25otgfb" path="res://img/Background.png" id="2_y65m8"]
+
+[node name="UI_dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+pivot_offset = Vector2(-598, -289)
+script = ExtResource("1_krnmw")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(576.5, 301.5)
+scale = Vector2(0.383667, 0.321479)
+texture = ExtResource("2_y65m8")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 209.0
+offset_top = 116.0
+offset_right = 938.0
+offset_bottom = 315.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 16.0
+offset_right = 709.0
+offset_bottom = 185.0
+text = "..."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 678.0
+offset_top = 168.0
+offset_right = 729.0
+offset_bottom = 199.0
+text = "v"

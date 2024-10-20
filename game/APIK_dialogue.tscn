@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://boor6ibsab31h"]
+
+[ext_resource type="Script" path="res://APIK_dialogue.gd" id="1_24dyy"]
+
+[node name="APIK_dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_24dyy")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 209.0
+offset_top = 116.0
+offset_right = 938.0
+offset_bottom = 315.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 16.0
+offset_right = 709.0
+offset_bottom = 185.0
+text = "..."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 678.0
+offset_top = 168.0
+offset_right = 729.0
+offset_bottom = 199.0
+text = "v"
