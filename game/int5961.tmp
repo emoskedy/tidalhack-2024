@@ -1,0 +1,194 @@
+[gd_scene load_steps=22 format=3 uid="uid://bfwtckd31k700"]
+
+[ext_resource type="Texture2D" uid="uid://d3oxry25otgfb" path="res://img/Background.png" id="1_adudt"]
+[ext_resource type="Script" path="res://Interface.gd" id="1_pefxo"]
+[ext_resource type="Texture2D" uid="uid://ceumdilynug27" path="res://img/interface_character/char1_head.PNG" id="2_x5s51"]
+[ext_resource type="Texture2D" uid="uid://cu237abbhvk56" path="res://img/interface_character/char1-body.PNG" id="3_ehv0g"]
+[ext_resource type="Texture2D" uid="uid://c4wxwadqwqnl6" path="res://img/interface_character/char1_leg.PNG" id="4_aqhln"]
+[ext_resource type="Texture2D" uid="uid://c3c02dtvty4mi" path="res://img/interface_character/char2_head.PNG" id="5_hlpxx"]
+[ext_resource type="Texture2D" uid="uid://db6qmr0an4xxa" path="res://img/interface_character/char2_body.PNG" id="6_m8n57"]
+[ext_resource type="Texture2D" uid="uid://cxahnd4r7xan0" path="res://img/interface_character/char2_leg.PNG" id="7_ubc5m"]
+[ext_resource type="Texture2D" uid="uid://c3kj2du0lbsfl" path="res://img/interface_character/frank_head.PNG" id="8_jl4qi"]
+[ext_resource type="Texture2D" uid="uid://cvqpeh3tf7dts" path="res://img/interface_character/frank_body.PNG" id="9_8mit8"]
+[ext_resource type="Texture2D" uid="uid://n46p7npwuo4q" path="res://img/interface_character/frank_leg.PNG" id="10_4t8xv"]
+[ext_resource type="Texture2D" uid="uid://0hiaspetlhe0" path="res://img/mad_scientist_character.png" id="11_662kg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlt6n"]
+size = Vector2(382, 342)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gtpfo"]
+size = Vector2(16.1357, 21.6054)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8in3x"]
+size = Vector2(260.287, 88.8967)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqbv7"]
+size = Vector2(225.645, 21.607)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o13ir"]
+size = Vector2(777.729, 472.273)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g50q7"]
+size = Vector2(212.196, 94.981)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8knj1"]
+size = Vector2(412.603, 431.372)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_soly3"]
+size = Vector2(337.942, 217.665)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rxsvv"]
+size = Vector2(373.308, 75.1933)
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 575.0
+offset_top = 340.0
+offset_right = 575.0
+offset_bottom = 340.0
+scale = Vector2(0.395717, 0.392919)
+script = ExtResource("1_pefxo")
+
+[node name="Background_img" type="Sprite2D" parent="."]
+position = Vector2(7.58117, -96.712)
+scale = Vector2(0.974298, 0.830362)
+texture = ExtResource("1_adudt")
+
+[node name="Char1" type="Area2D" parent="."]
+
+[node name="Char1_head" type="Sprite2D" parent="Char1"]
+position = Vector2(-897.105, -603.178)
+scale = Vector2(0.728555, 0.745065)
+texture = ExtResource("2_x5s51")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Char1"]
+position = Vector2(-900.748, -592.002)
+scale = Vector2(0.728555, 0.745065)
+shape = SubResource("RectangleShape2D_tlt6n")
+
+[node name="Char2" type="Area2D" parent="."]
+
+[node name="Char1_body" type="Sprite2D" parent="Char2"]
+position = Vector2(1030, -228)
+scale = Vector2(0.63872, 0.63872)
+texture = ExtResource("3_ehv0g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Char2"]
+position = Vector2(1025.99, -227.903)
+scale = Vector2(20.0465, 4.60528)
+shape = SubResource("RectangleShape2D_gtpfo")
+
+[node name="Char3" type="Area2D" parent="."]
+position = Vector2(0, 6.10352e-05)
+
+[node name="Char1_leg" type="Sprite2D" parent="Char3"]
+position = Vector2(68.2306, 45.811)
+scale = Vector2(0.64309, 0.64309)
+texture = ExtResource("4_aqhln")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Char3"]
+position = Vector2(59.3859, 34.4484)
+shape = SubResource("RectangleShape2D_8in3x")
+
+[node name="Char4" type="Area2D" parent="."]
+position = Vector2(68.2306, 45.8111)
+scale = Vector2(0.64309, 0.64309)
+
+[node name="Char2_head" type="Sprite2D" parent="Char4"]
+position = Vector2(-51.0842, -1092.28)
+scale = Vector2(1.07313, 1.07313)
+texture = ExtResource("5_hlpxx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Char4"]
+position = Vector2(-42.1704, -1067.81)
+scale = Vector2(2.09912, 15.6842)
+shape = SubResource("RectangleShape2D_qqbv7")
+
+[node name="Char5" type="Area2D" parent="."]
+position = Vector2(68.2306, 45.8111)
+scale = Vector2(0.64309, 0.64309)
+
+[node name="Char2_body" type="Sprite2D" parent="Char5"]
+position = Vector2(-1556.91, -458.429)
+scale = Vector2(0.902552, 0.902552)
+texture = ExtResource("6_m8n57")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Char5"]
+position = Vector2(-1540.39, -459.075)
+scale = Vector2(0.50526, 0.251394)
+shape = SubResource("RectangleShape2D_o13ir")
+
+[node name="Char6" type="Area2D" parent="."]
+position = Vector2(68.2306, 45.8111)
+scale = Vector2(0.64309, 0.64309)
+
+[node name="Char2_leg" type="Sprite2D" parent="Char6"]
+position = Vector2(-1540.39, -15.8302)
+scale = Vector2(0.956301, 0.956301)
+texture = ExtResource("7_ubc5m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Char6"]
+position = Vector2(-1544.32, -51.4481)
+shape = SubResource("RectangleShape2D_g50q7")
+
+[node name="Char7" type="Area2D" parent="."]
+position = Vector2(68.2306, 45.8111)
+scale = Vector2(0.64309, 0.64309)
+
+[node name="Frank_head" type="Sprite2D" parent="Char7"]
+position = Vector2(1450.45, -1141.07)
+scale = Vector2(0.705304, 0.705304)
+texture = ExtResource("8_jl4qi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Char7"]
+position = Vector2(1448.04, -1114.05)
+shape = SubResource("RectangleShape2D_8knj1")
+
+[node name="Char8" type="Area2D" parent="."]
+position = Vector2(68.2306, 45.8111)
+scale = Vector2(0.64309, 0.64309)
+
+[node name="Frank_body" type="Sprite2D" parent="Char8"]
+position = Vector2(-23.5774, -490.736)
+scale = Vector2(0.647013, 0.647013)
+texture = ExtResource("9_8mit8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Char8"]
+position = Vector2(-19.6475, -500.629)
+shape = SubResource("RectangleShape2D_soly3")
+
+[node name="Char9" type="Area2D" parent="."]
+position = Vector2(68.2306, 45.8111)
+scale = Vector2(0.64309, 0.64309)
+
+[node name="Frank_leg" type="Sprite2D" parent="Char9"]
+position = Vector2(1489.3, 47.4905)
+scale = Vector2(0.736586, 0.736586)
+texture = ExtResource("10_4t8xv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Char9"]
+position = Vector2(1483.41, 9.89368)
+shape = SubResource("RectangleShape2D_rxsvv")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -1183.0
+offset_top = 331.0
+offset_right = 643.0
+offset_bottom = 624.0
+
+[node name="MadScientistLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 32.0
+offset_right = 1792.0
+offset_bottom = 233.0
+theme_override_font_sizes/font_size = 53
+text = "Oh, how delightful! It's time to play doctor... or should I say, monster-maker? Pick the right piece, or else ..."
+autowrap_mode = 1
+
+[node name="Mad Scientists" type="Sprite2D" parent="."]
+position = Vector2(1070.85, 506.718)
+scale = Vector2(1.14394, 1.14394)
+texture = ExtResource("11_662kg")
