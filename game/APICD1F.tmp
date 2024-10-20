@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d034q2xv0vba3"]
+
+[ext_resource type="Texture2D" uid="uid://cn54yy47etka0" path="res://3. Interface - Body Puzzle.png" id="1_toso4"]
+[ext_resource type="PackedScene" uid="uid://gdboajcadiui" path="res://player.tscn" id="2_spjxw"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="3_Interface-BodyPuzzle" type="Sprite2D" parent="."]
+position = Vector2(575, 324.75)
+scale = Vector2(0.598958, 0.598611)
+texture = ExtResource("1_toso4")
+
+[node name="Player" parent="." instance=ExtResource("2_spjxw")]
+position = Vector2(575, 339)

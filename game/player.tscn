@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://d4lmu5syddfym"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_ua831"]
+[ext_resource type="Texture2D" uid="uid://biw8gqpqjbr6r" path="res://mad_scientist_character.png" id="2_qcpr2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_otybv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qcpr2")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvid0"]
+size = Vector2(50, 68)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_ua831")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(5, -20)
+scale = Vector2(0.370448, 0.285838)
+sprite_frames = SubResource("SpriteFrames_otybv")
+animation = &"new_animation"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fvid0")

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://gdboajcadiui"]
+
+[ext_resource type="Texture2D" uid="uid://b3cve3sw57mm5" path="res://character_maleAdventurer_idle.png" id="1_k3t4m"]
+[ext_resource type="Script" path="res://player.gd" id="1_ua831"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_otybv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_k3t4m")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fvid0"]
+size = Vector2(50, 68)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_ua831")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-3, -18)
+scale = Vector2(0.596354, 0.453125)
+sprite_frames = SubResource("SpriteFrames_otybv")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fvid0")
