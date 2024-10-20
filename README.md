@@ -57,12 +57,12 @@ The final chatbot is hosted on a **Streamlit** web app, where players can intera
 1. Clone this repository:
    ```bash
    git clone https://github.com/5urada/build-a-monster.git
-   cd build-a-monster```
+   cd build-a-monster
 2. Activate your Python Virtual Enviroment
 3. Install necessary packages:
-    ```pip install openai streamlit python-dotenv```
+    ```pip install openai streamlit python-dotenv
 4. Add your OpenAI API key in the .env file
-    ```OPENAI_API_KEY=your-api-key-here```
+    ```OPENAI_API_KEY=your-api-key-here
 5. Deploy streamlit:
-    ```streamlit run app.py```
+    ```streamlit run app.py
 6. Import the game directory into Godot and run
