@@ -78,3 +78,8 @@ func show_success_message():
 	
 	#Make the next button visible
 	next_button.visible = true
+
+
+func _on_next_button_pressed() -> void:
+	var next_scene_path = "res://API.tscn" 
+	get_tree().change_scene_to_file(next_scene_path)
