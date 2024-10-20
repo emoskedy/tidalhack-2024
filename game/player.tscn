@@ -1,13 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://gdboajcadiui"]
+[gd_scene load_steps=5 format=3 uid="uid://d4lmu5syddfym"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_ua831"]
-[ext_resource type="Texture2D" uid="uid://dvao0d4b0o8yx" path="res://img/mad_scientist_character.png" id="2_nldv0"]
+[ext_resource type="Texture2D" uid="uid://biw8gqpqjbr6r" path="res://mad_scientist_character.png" id="2_qcpr2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_otybv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_nldv0")
+"texture": ExtResource("2_qcpr2")
 }],
 "loop": true,
 "name": &"new_animation",

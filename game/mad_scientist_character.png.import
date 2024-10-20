@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvao0d4b0o8yx"
-path="res://.godot/imported/mad_scientist_character.png-aebf7c611cd8c03f48e641f76c032a24.ctex"
+uid="uid://biw8gqpqjbr6r"
+path="res://.godot/imported/mad_scientist_character.png-6e6304712c278a25c98efefae7beca80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/mad_scientist_character.png"
-dest_files=["res://.godot/imported/mad_scientist_character.png-aebf7c611cd8c03f48e641f76c032a24.ctex"]
+source_file="res://mad_scientist_character.png"
+dest_files=["res://.godot/imported/mad_scientist_character.png-6e6304712c278a25c98efefae7beca80.ctex"]
 
 [params]
 

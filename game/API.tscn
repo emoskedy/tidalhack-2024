@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://d034q2xv0vba3"]
+[gd_scene load_steps=4 format=3 uid="uid://c1v8ynigwfqn"]
 
 [ext_resource type="Script" path="res://api.gd" id="1_4ocq1"]
 [ext_resource type="Texture2D" uid="uid://cn54yy47etka0" path="res://img/3. Interface - Body Puzzle.png" id="2_d01ei"]
-[ext_resource type="PackedScene" uid="uid://gdboajcadiui" path="res://player.tscn" id="2_spjxw"]
+[ext_resource type="PackedScene" uid="uid://d4lmu5syddfym" path="res://player.tscn" id="2_spjxw"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_4ocq1")
