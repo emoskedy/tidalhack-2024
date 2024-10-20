@@ -17,6 +17,7 @@ scale = Vector2(0.383667, 0.321479)
 texture = ExtResource("2_46yxk")
 
 [node name="Panel" type="Panel" parent="."]
+layout_mode = 0
 offset_left = 209.0
 offset_top = 116.0
 offset_right = 938.0

@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cc6ymu84hp2fb"]
+[gd_scene load_steps=4 format=3 uid="uid://cc6ymu84hp2fb"]
 
+[ext_resource type="Script" path="res://introToPage.gd" id="1_7nlui"]
 [ext_resource type="Texture2D" uid="uid://d3oxry25otgfb" path="res://img/Background.png" id="1_b6wk7"]
 [ext_resource type="Texture2D" uid="uid://sdm15pyx013p" path="res://img/playButton.png" id="2_s4jry"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_7nlui")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_top = -47.0
@@ -35,3 +37,5 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 uppercase = true
+
+[connection signal="pressed" from="TextureRect/Sprite2D/TextureButton" to="." method="_on_texture_button_pressed"]

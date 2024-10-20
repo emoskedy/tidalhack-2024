@@ -189,6 +189,7 @@ text = "Oh, how delightful! It's time to play doctor... or should I say, monster
 autowrap_mode = 1
 
 [node name="next_button" type="Button" parent="Panel"]
+layout_mode = 0
 offset_left = 1703.57
 offset_top = 218.732
 offset_right = 1754.57
@@ -200,3 +201,5 @@ text = "v"
 position = Vector2(1070.85, 506.718)
 scale = Vector2(1.14394, 1.14394)
 texture = ExtResource("11_662kg")
+
+[connection signal="pressed" from="Panel/next_button" to="." method="_on_next_button_pressed"]

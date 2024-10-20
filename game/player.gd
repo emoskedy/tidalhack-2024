@@ -4,10 +4,19 @@ const SPEED = 30000
 var screen_size = Vector2()
 
 # The correct input sequence: Up, Up, Down, Down, Left, Right, Left, Right
-var required_sequence = ["right", "right", "right", "right", "right", "right"]
+var required_sequence = ["up", "up", "down", "left", "right"]
 var current_sequence = []
 
+var success_messages = [
+	"Mwahaha! Brilliant! You've chosen correctly, and our creation is almost complete!",
+	"Splendid! You've got the hands of a true monster-maker!",
+	"Yes, yes! Perfect! Our creature will rise thanks to your masterful selections!",
+	"Excellent choice, my little apprentice! The creature stirs!",
+	"Magnificent! You're truly becoming a master of monstrous arts!"
+]
+
 # Reference to the 'Button' node that is a sibling of 'Player'
+@onready var mad_scientist_label : Label = get_node("../Panel/Label")
 @onready var button : Button = get_node("../Button")  # Go one level up and find the Button node
 
 func _ready() -> void:
@@ -43,7 +52,12 @@ func _physics_process(delta: float) -> void:
 	elif position.y < 0:
 		position.y = screen_size.y
 		record_input("up")
-
+		
+func show_success_message():
+	# Choose a random success message
+	var message = success_messages[randi() % success_messages.size()]
+	mad_scientist_label.text = message
+	
 func record_input(direction: String) -> void:
 	# Add the new input direction to the sequence
 	current_sequence.append(direction)
@@ -54,4 +68,5 @@ func record_input(direction: String) -> void:
 
 	# Check if the current sequence matches the required sequence
 	if current_sequence == required_sequence:
+		show_success_message()
 		button.show()  # Show the button when the sequence is correct

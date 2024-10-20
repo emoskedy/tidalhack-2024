@@ -17,6 +17,9 @@ var success_messages = [
 	"Magnificent! You're truly becoming a master of monstrous arts!"
 ]
 
+func _on_next_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://APIK_dialogue.tscn")
+
 func _ready():
 	randomize()
 	

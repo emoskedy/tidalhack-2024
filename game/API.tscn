@@ -20,6 +20,26 @@ offset_left = 118.0
 offset_top = 422.0
 offset_right = 286.0
 offset_bottom = 502.0
-text = "Click Here
-You found an 
-Easter Egg!!"
+text = "It's time to make... 
+a monster!!"
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 62.0
+offset_top = 94.0
+offset_right = 816.0
+offset_bottom = 287.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 15.0
+offset_right = 564.0
+offset_bottom = 187.0
+theme_override_font_sizes/font_size = 23
+text = "Solve this riddle:
+\"Climb to the sky, not once but twice,
+Then fall below where the earth lies.
+To the west, where the sun has set,
+Then to the east, you shall be met.\""
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

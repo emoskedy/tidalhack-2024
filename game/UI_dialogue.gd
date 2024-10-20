@@ -35,7 +35,8 @@ func _on_Button_pressed():
 		show_dialogue()
 	else:
 		# Hide or close the dialogue box after the last line
-		$Panel.hide()
+		#$Panel.hide()
+		get_tree().change_scene_to_file("res://interface.tscn")
 
 # Initialize the first line of dialogue when the scene starts
 func _ready():
