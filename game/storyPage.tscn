@@ -1,0 +1,88 @@
+[gd_scene load_steps=8 format=3 uid="uid://cmec2nia5sxv8"]
+
+[ext_resource type="Texture2D" uid="uid://bplph0b8jb1kt" path="res://img/Background.png" id="1_frtgd"]
+[ext_resource type="Script" path="res://exitPressed.gd" id="1_j18y3"]
+[ext_resource type="Texture2D" uid="uid://byb6nl4mf4qx5" path="res://img/mad_scientist_character.png" id="2_dyjcm"]
+[ext_resource type="Texture2D" uid="uid://w6lerteb34mc" path="res://img/bubble.png" id="3_j1g0v"]
+[ext_resource type="Texture2D" uid="uid://nl5euwr4nguo" path="res://img/startButton.png" id="4_jtx80"]
+[ext_resource type="Texture2D" uid="uid://cwnk53s8vqs62" path="res://img/exitButton.png" id="5_bm3ur"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3qg76"]
+size = Vector2(356, 303.5)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(0, 3)
+script = ExtResource("1_j18y3")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = -46.0
+offset_right = 1151.0
+offset_bottom = 648.0
+texture = ExtResource("1_frtgd")
+expand_mode = 2
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="TextureRect"]
+position = Vector2(224, 389)
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureRect/CharacterBody2D"]
+position = Vector2(17, 154)
+scale = Vector2(0.680097, 0.623181)
+texture = ExtResource("2_dyjcm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/CharacterBody2D"]
+position = Vector2(17, 154)
+shape = SubResource("RectangleShape2D_3qg76")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 88.0
+offset_right = 1135.0
+offset_bottom = 486.0
+texture = ExtResource("3_j1g0v")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="TextureRect/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.179
+anchor_top = 0.852
+anchor_right = 0.179
+anchor_bottom = 0.852
+offset_left = -64.479
+offset_top = -301.096
+offset_right = 513.521
+offset_bottom = 19.904
+theme_override_font_sizes/font_size = 17
+text = "\"Welcome, Scientist! Your journey begins here, in the heart of the lab, where centuries of knowledge and innovation converge. Today, you face a challenge few have dared to attempt—bringing Frankenstein to life. But this time, it's not just bolts and wires. To succeed, you’ll need more than just parts; you’ll need to harness the power of intelligence, decision-making, and the mysterious force that drives thought itself. Every step you take brings you closer to the ultimate creation: a mind of your own design.
+
+Prepare to delve into the unknown, where the boundaries of science blur, and only the sharpest minds will triumph. Are you ready to give life to Frankenstein?\""
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="TextureRect"]
+position = Vector2(574.5, 555)
+scale = Vector2(0.665899, 0.585106)
+texture = ExtResource("4_jtx80")
+
+[node name="TextureButton" type="Button" parent="TextureRect/Sprite2D"]
+offset_left = -214.0
+offset_top = -65.0
+offset_right = 211.0
+offset_bottom = 68.0
+size_flags_stretch_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="TextureRect"]
+position = Vector2(969, 554)
+scale = Vector2(0.665899, 0.585106)
+texture = ExtResource("5_bm3ur")
+
+[node name="TextureButton" type="Button" parent="TextureRect/Sprite2D2"]
+offset_left = -214.0
+offset_top = -65.0
+offset_right = 211.0
+offset_bottom = 68.0
+size_flags_stretch_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="TextureRect/Sprite2D2/TextureButton" to="." method="_on_texture_button_pressed"]
