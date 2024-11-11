@@ -1,6 +1,6 @@
 # Build-A-Monster
 
-Welcome to **Build-A-Monster**, an educational and fun-filled video game that teaches you how to create and customize your very own chatbot! This project, built in Unity, takes players on a journey through various stages of chatbot creation, from designing the user interface to engineering prompts and integrating APIs. The final chatbot will be hosted on a **Streamlit** web app.
+Welcome to **Build-A-Monster**, an educational and fun-filled video game that teaches you how to create and customize your very own chatbot! This project, built in Godot, takes players on a journey through various stages of chatbot creation, from designing the user interface to engineering prompts and integrating APIs. The final chatbot will be hosted on a **Streamlit** web app.
 
 ## 🎮 Game Overview
 
@@ -39,10 +39,9 @@ This game is designed to teach the core concepts of chatbot creation:
 The final chatbot is hosted on a **Streamlit** web app, where players can interact with their creation outside the game. Behind the scenes, **OpenAI's GPT-3.5** powers the chatbot's conversation, enabling it to learn and respond based on the player's input.
 
 ### Technologies Used:
-- **Unity**: For creating the interactive, educational game environment.
+- **Godot**: For managing creating the interactive, educational game, puzzles environment.
 - **Streamlit**: For hosting the final chatbot on the web.
 - **OpenAI API**: For powering the chatbot’s natural language understanding and conversation capabilities.
-- **Godot**: For managing creating the interactive, educational game, puzzles environment.
 - **Python**: For handling the backend and chatbot logic.
 
 ## 🔧 Installation and Setup
